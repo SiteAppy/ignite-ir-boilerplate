@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+/* @flow */
+import * as React from 'react'
 import { View, ListView, Text } from 'react-native'
 import { connect } from 'react-redux'
 
@@ -8,7 +9,7 @@ import { connect } from 'react-redux'
 // Styles
 import styles from './Styles/<%= props.name %>Style'
 
-class <%= props.name %> extends Component {
+class <%= props.name %> extends React.Component {
   constructor (props) {
     super(props)
 

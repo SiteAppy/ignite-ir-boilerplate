@@ -1,25 +1,26 @@
-import React, { Component } from 'react'
-// import PropTypes from 'prop-types';
-import { View, Text } from 'react-native'
-import styles from './Styles/<%= props.name %>Style'
+/* @flow */
+import * as React from 'react'
+import { connect } from 'react-redux'
 
-export default class <%= props.name %> extends Component {
-  // // Prop type warnings
-  // static propTypes = {
-  //   someProperty: PropTypes.object,
-  //   someSetting: PropTypes.bool.isRequired,
-  // }
-  //
-  // // Defaults for props
-  // static defaultProps = {
-  //   someSetting: false
-  // }
+import styles from './Styles/MyComponentStyle'
 
-  render () {
+import Text from '../Components/Text'
+import Container from '../Components/Container'
+
+type Props = {
+  data: any[],
+}
+
+type State = {
+  data: any[],
+}
+
+export default class MyComponent extends React.Component<Props, State> {
+  render() {
     return (
-      <View style={styles.container}>
-        <Text><%= props.name %> Component</Text>
-      </View>
+      <Container style={styles.container}>
+        <Text>Hello</Text>
+      </Container>
     )
   }
 }

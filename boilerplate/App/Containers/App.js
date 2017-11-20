@@ -1,7 +1,8 @@
-import '../Config'
-import DebugConfig from '../Config/DebugConfig'
-import React, { Component } from 'react'
+/* @flow */
+import * as React from 'react'
 import { Provider } from 'react-redux'
+import DebugConfig from '../Config/DebugConfig'
+import '../Config'
 import RootContainer from './RootContainer'
 import createStore from '../Redux'
 
@@ -17,8 +18,8 @@ const store = createStore()
  *
  * We separate like this to play nice with React Native's hot reloading.
  */
-class App extends Component {
-  render () {
+class App extends React.Component {
+  render() {
     return (
       <Provider store={store}>
         <RootContainer />
@@ -28,6 +29,4 @@ class App extends Component {
 }
 
 // allow reactotron overlay for fast design in dev mode
-export default DebugConfig.useReactotron
-  ? console.tron.overlay(App)
-  : App
+export default (DebugConfig.useReactotron ? console.tron.overlay(App) : App)

@@ -75,7 +75,7 @@ React components go here...pretty self-explanatory. We won't go through each in 
 
 Styling themes used throughout your app styles.
 
-* `ApplicationStyles.js` - app-wide styles
+* `AppStyles.js` - app-wide styles
 * `Colors.js` - defined colors for your app
 * `Fonts.js` - defined fonts for your app
 * `Images.js` - loads and caches images used in your app
